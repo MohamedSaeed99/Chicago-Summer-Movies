@@ -1,6 +1,13 @@
 body{
     height: 100%;
 }
+.content{
+    height: 80vh;
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #standForm{
     height:80vh;
     width:100%;
