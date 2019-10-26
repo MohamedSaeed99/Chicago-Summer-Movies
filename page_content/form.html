@@ -38,6 +38,10 @@
 <script>
     $(document).ready(function(){
         $(".submit").on("click", function(){
+            url = 'https://data.cityofchicago.org/resource/7piw-z6r6.json';
+            $.get(url, function(data){
+                movieData = data
+            });
             console.log($(".park").val());
             console.log($(".movie").val());
             console.log($(".date").val());

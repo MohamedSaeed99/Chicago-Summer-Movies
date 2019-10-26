@@ -5,39 +5,37 @@
 
 <script>
     $(document).ready(function() {
-        $.get(url, function(data){
-            $.each(data, function(i, v){
-                var card = $("<div/>")
-                card.addClass("card")
+        $.each(movieData, function(i, v){
+            var card = $("<div/>")
+            card.addClass("card")
 
-                var cardBod = $("<div/>")
-                cardBod.addClass("card-body")
+            var cardBod = $("<div/>")
+            cardBod.addClass("card-body")
 
-                var h5 = $("<h5/>")
-                h5.addClass("card-title")
-                h5.text(v.title)
+            var h5 = $("<h5/>")
+            h5.addClass("card-title")
+            h5.text(v.title)
 
-                var h6 = $("<h6/>")
-                h6.addClass("card-subtitle mb-2 text-muted")
-                h6.text(v.park)
+            var h6 = $("<h6/>")
+            h6.addClass("card-subtitle mb-2 text-muted")
+            h6.text(v.park)
 
-                var str =  "Rating: " + v.rating + "\n" + "Day: " + v.day + "\n" + "Park Phone: " + v.park_phone
-                
-                var p = $("<p/>")
-                p.addClass("card-text")
-                p.text(str)
-                p.html(p.html().replace("\n", "<br />"))
+            var str =  "Rating: " + v.rating + "\n" + "Day: " + v.day + "\n" + "Park Phone: " + v.park_phone
+            
+            var p = $("<p/>")
+            p.addClass("card-text")
+            p.text(str)
+            p.html(p.html().replace("\n", "<br />"))
 
-                cardBod.append(h5)
-                cardBod.append(h6)
-                cardBod.append(p)
+            cardBod.append(h5)
+            cardBod.append(h6)
+            cardBod.append(p)
 
-                card.append(cardBod)
+            card.append(cardBod)
 
-                $(".row").append(card)
-                $(".card").css("width", "18rem")
+            $(".row").append(card)
+            $(".card").css("width", "18rem")
 
-            });
         });
     });
 </script>
