@@ -1,14 +1,12 @@
 body{
     height: 100%;
 }
+
 .content{
-    height: 80vh;
-    display:none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
 }
-#standForm{
+
+.load, #standForm{
     height:80vh;
     width:100%;
     display: flex;
@@ -16,20 +14,37 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.list{
+    margin-left: 10px;
+    width: 100%;
+    padding-top:1vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-group{
     width: 50%;
 }
+
 #submission{
     width:100%;
     display: flex;
     justify-content: center;
     align-items:center;
 }
+
 .form-check{
     margin-right: 2%;
 }
+
 .btn{
     width: 150px;
     font-size: 20px;
     margin-left: 13%;
+}
+
+.card{
+    margin: 10px;
 }
