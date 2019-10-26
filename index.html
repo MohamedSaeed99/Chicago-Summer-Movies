@@ -51,6 +51,8 @@
 
     <script>
         $(document).ready(function() {
+            var url;
+            
             function hideScreens() {
                 $(".content").hide();
             }
@@ -58,10 +60,10 @@
                 hideScreens();
                 var target = $(this).attr("href");
                 $(target).show();
+                url = 'https://data.cityofchicago.org/resource/7piw-z6r6.json';
                 $(target).load('page_content/'+target.replace("#","") + ".html");
             });
 
-            url = 'https://data.cityofchicago.org/resource/7piw-z6r6.json';
         });
     </script>
 </body>
