@@ -2,9 +2,20 @@
     <div class="row">
     </div>
 </div>
+<div class='empty'> 
+    <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width=400/> 
+</div>
 
 <script>
     $(document).ready(function() {
+        // if (movieData == undefined || movieData == 0){
+        //     $(".list").hide()
+        //     $("#display").css("display", "flex")
+        // }
+        // else{
+        //     $(".list").hide()
+        //     $("#display").hide()
+        // }
         $.each(movieData, function(i, v){
             var card = $("<div/>")
             card.addClass("card")
@@ -14,11 +25,11 @@
 
             var h5 = $("<h5/>")
             h5.addClass("card-title")
-            h5.text(v.title)
+            h5.text(v.park)
 
             var h6 = $("<h6/>")
             h6.addClass("card-subtitle mb-2 text-muted")
-            h6.text(v.park)
+            h6.text(v.title)
 
             var str =  "Rating: " + v.rating + "\n" + "Day: " + v.day + "\n" + "Park Phone: " + v.park_phone
             

@@ -38,14 +38,30 @@
 <script>
     $(document).ready(function(){
         $(".submit").on("click", function(){
-            url = 'https://data.cityofchicago.org/resource/7piw-z6r6.json';
+            url = 'https://data.cityofchicago.org/resource/7piw-z6r6.json?$select= park, title, day, date, rating, park_address, park_phone, cc, location'
+            var whereClaus='&$where='
+            if ($(".park").val() != undefined){
+                whereClaus = whereClaus + 'park='+$(".park").val()
+            }
+            if($(".movie").val() != undefined){
+                whereClaus = whereClaus + '&title='+$(".movie").val()
+            }
+            if($(".date").val() != undefined){
+                whereClaus = whereClaus + '&day in('+ +')'
+            }
+            if($("input[name=radioBtn]:checked").val() == 'Upcoming'){
+                var date = new Date();
+                console.log(dat.getDate())
+            }
+            url = url + whereClaus
+            console.log(url)
             $.get(url, function(data){
                 movieData = data
             });
-            console.log($(".park").val());
-            console.log($(".movie").val());
-            console.log($(".date").val());
-            console.log($("input[name=radioBtn]:checked").val());
+            // console.log($(".park").val());
+            // console.log($(".movie").val());
+            // console.log($(".date").val());
+            // console.log($("input[name=radioBtn]:checked").val());
         });
     });
 
