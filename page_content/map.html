@@ -3,7 +3,7 @@
     // When the user clicks the marker, an info window opens.
 
     function initMap() {
-      var cen = {lat: parseFloat(movieData[0]['location']['latitude']), lng: parseFloat(movieData[0]['location']['longitude'])};
+      var cen = {lat: 41.8781, lng: -87.6298};
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
         center: cen
@@ -17,6 +17,7 @@
             '<h5>' + v.park + '</h5>'
             '<div id="bodyContent">' +
             '<p><b>Rating</b>: ' + v.rating + '<br/>' +
+            '<b>Closed Caption</b>: ' + v.cc + '<br/>' +
             '<b>Day</b>: ' + v.day + '<br/>' +
             '<b>Park Phone</b>: ' + v.park_phone  + '<br/>' +
             '<b>Park Address</b>: ' + v.park_address + '</p>'
