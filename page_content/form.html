@@ -44,10 +44,10 @@
                 whereClaus = whereClaus + 'park='+$(".park").val()
             }
             if($(".movie").val() != undefined){
-                whereClaus = whereClaus + '&title='+$(".movie").val()
+                whereClaus = whereClaus + 'and title='+$(".movie").val()
             }
             if($(".date").val() != undefined){
-                whereClaus = whereClaus + '&day in('+ +')'
+                whereClaus = whereClaus + 'and day in('+ +')'
             }
             if($("input[name=radioBtn]:checked").val() == 'Upcoming'){
                 var date = new Date();
