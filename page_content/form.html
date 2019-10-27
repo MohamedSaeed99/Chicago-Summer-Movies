@@ -85,7 +85,7 @@
                 date = d.toISOString()
                 date = date.substring(0, date.length-1)
                 console.log(date)
-                whereClaus = whereClaus + ' date >= '+date+' and'
+                whereClaus = whereClaus + ' date >= \''+date+'\' and'
             }
             whereClaus = whereClaus.substring(0, whereClaus.length-3)
             url = url + whereClaus
