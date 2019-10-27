@@ -28,15 +28,19 @@ body{
     width: 50%;
 }
 
+.day{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 25px;
+}
+
 #submission{
     width:100%;
     display: flex;
     justify-content: center;
     align-items:center;
-}
-
-.form-check{
-    margin-right: 2%;
 }
 
 .btn{
