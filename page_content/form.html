@@ -54,10 +54,10 @@
             url = 'https://data.cityofchicago.org/resource/7piw-z6r6.json?$select= park, title, day, date, rating, park_address, park_phone, cc, location'
             var whereClaus='&$where='
             if ($(".park").val() != ""){
-                whereClaus = whereClaus + 'park=\''+$(".park").val()+'\''
+                whereClaus = whereClaus + 'park=\''+$(".park").val()+'\' and'
             }
             if($(".movie").val() != ""){
-                whereClaus = whereClaus + 'and title=\''+$(".movie").val()+'\''
+                whereClaus = whereClaus + ' title=\''+$(".movie").val()+'\' and'
             }
             var str = [];
             $('.date').each(function(i, obj) {
@@ -77,13 +77,14 @@
                         days = days + str[i] + ', '
                     }
                 }
-                whereClaus = whereClaus + 'and day in('+days+')'
+                whereClaus = whereClaus + ' day in('+days+') and'
             }
 
             if($(".upcoming").is(':checked')){
                 var date = new Date();
                 console.log(date.getDate())
             }
+            whereClaus = whereClaus.substring(0, whereClaus.length-3)
             url = url + whereClaus
             console.log(url)
             $.get(url, function(data){
