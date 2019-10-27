@@ -53,11 +53,11 @@
         $(".submit").on("click", function(){
             url = 'https://data.cityofchicago.org/resource/7piw-z6r6.json?$select= park, title, day, date, rating, park_address, park_phone, cc, location'
             var whereClaus='&$where='
-            if ($(".park").val() != undefined){
-                whereClaus = whereClaus + 'park='+$(".park").val()
+            if ($(".park").val() != ""){
+                whereClaus = whereClaus + 'park=\''+$(".park").val()+'\''
             }
-            if($(".movie").val() != undefined){
-                whereClaus = whereClaus + 'and title='+$(".movie").val()
+            if($(".movie").val() != ""){
+                whereClaus = whereClaus + 'and title=\''+$(".movie").val()+'\''
             }
             var str = [];
             $('.date').each(function(i, obj) {
@@ -67,7 +67,7 @@
                 }
             });
 
-            if(str != undefined || str.length != 0){
+            if(str.length != 0){
                 var days=''
                 for(let i = 0; i < str.length; i++){
                     if(i == str.length-1){
