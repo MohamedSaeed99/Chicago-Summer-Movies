@@ -28,12 +28,13 @@
             h6.addClass("card-subtitle mb-2 text-muted")
             h6.text(v.title)
 
-            var str =  "Rating: " + v.rating + "\n" + "Day: " + v.day + "\n" + "Park Phone: " + v.park_phone
+            var str =  "Rating: " + v.rating + "\n" + "Closed Caption: " + v.cc + "\n "+ "Day: " + v.day + "\n" + 
+                       "Park Phone: " + v.park_phone + "\n" + "Park Adress: " + v.park_address;
             
             var p = $("<p/>")
             p.addClass("card-text")
             p.text(str)
-            p.html(p.html().replace("\n", "<br />"))
+            p.html(p.html().replace(/\n/g, "<br />"))
 
             cardBod.append(h5)
             cardBod.append(h6)
