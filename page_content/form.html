@@ -81,9 +81,10 @@
             }
 
             if($(".upcoming").is(':checked')){
-                var date = new Date();
+                var d = new Date();
+                date = d.toISOString()
                 date = date.substring(0, date.length-1)
-                console.log(date.toISOString())
+                console.log(date)
                 whereClaus = whereClaus + ' date >= '+date+' and'
             }
             whereClaus = whereClaus.substring(0, whereClaus.length-3)
@@ -92,10 +93,6 @@
             $.get(url, function(data){
                 movieData = data
             });
-            // console.log($(".park").val());
-            // console.log($(".movie").val());
-            // console.log($(".date").val());
-            // console.log($("input[name=radioBtn]:checked").val());
         });
     });
 
