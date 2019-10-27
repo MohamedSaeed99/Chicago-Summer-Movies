@@ -5,7 +5,7 @@
     function initMap() {
       var cen = {lat: 41.8781, lng: -87.6298};
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 11,
         center: cen
       });
 
@@ -14,7 +14,7 @@
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">' + v.title + '</h1>' +
-            '<h5>' + v.park + '</h5>'
+            // '<h5>' + v.park + '</h5>'
             '<div id="bodyContent">' +
             '<p><b>Rating</b>: ' + v.rating + '<br/>' +
             '<b>Closed Caption</b>: ' + v.cc + '<br/>' +
