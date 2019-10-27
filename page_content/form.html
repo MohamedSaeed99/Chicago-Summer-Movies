@@ -87,8 +87,10 @@
                 console.log(date)
                 whereClaus = whereClaus + ' date >= \''+date+'\' and'
             }
-            whereClaus = whereClaus.substring(0, whereClaus.length-3)
-            url = url + whereClaus
+            if(whereClaus != '&$where='){
+                whereClaus = whereClaus.substring(0, whereClaus.length-3)
+                url = url + whereClaus
+            }
             console.log(url)
             $.get(url, function(data){
                 movieData = data
