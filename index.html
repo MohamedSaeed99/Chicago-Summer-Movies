@@ -51,14 +51,6 @@
 
     <script>
         let movieData;
-        let map;
-        function initMap() {
-            var cen = {lat: 41.8781, lng: -87.6298};
-            map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 11,
-                center: cen
-            });
-        }
         $(document).ready(function() {
             function hideScreens() {
                 $(".content").hide();
