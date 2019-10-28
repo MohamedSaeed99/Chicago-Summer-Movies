@@ -80,7 +80,7 @@
             });
             $.each(movieData, function(i, v){
                 try{
-                    var d = new Date('\''+v.date+'\'')
+                    var d = new Date(v.date)
                     var contentString = '<div id="content">'+
                         '<div id="siteNotice">'+
                         '</div>'+
