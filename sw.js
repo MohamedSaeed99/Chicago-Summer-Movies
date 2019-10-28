@@ -4,8 +4,7 @@ var appShellFiles = [
  "./page_content/form.html",
  "./page_content/map.html",
  "./page_content/list.html",
- "./styles.css",
- movieData
+ "./styles.css"
 ];
 
 
