@@ -51,6 +51,14 @@
 
     <script>
         let movieData;
+        let map;
+        function initMap() {
+            var cen = {lat: 41.8781, lng: -87.6298};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: cen
+            });
+        }
         $(document).ready(function() {
             function hideScreens() {
                 $(".content").hide();
@@ -63,6 +71,9 @@
             });
             
         });
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjWnJfqHpg22ioGKK_n-Zsv3NuUwLVA-w&callback=initMap">
     </script>
 </body>
 </html>
