@@ -1,5 +1,4 @@
 <script>
-
     function initMap() {
         var cen = {lat: 41.8781, lng: -87.6298};
         map = new google.maps.Map(document.getElementById('map'), {
@@ -11,7 +10,7 @@
     // When the user clicks the marker, an info window opens
     $.each(movieData, function(i, v){
       if ('latitude' in v.location || 'longitude' in v.location){
-        console.log(v.park + ' v1')
+        console.log(v.park)
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
