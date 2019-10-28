@@ -19,7 +19,12 @@
         }
         var count = $("<p/>")
         count.addClass("value")
-        count.text(movieData.length)
+        if(movie.Data == undefined){
+            count.text(0)
+        }
+        else{
+            count.text(movieData.length)
+        }
         $(".count").append(count)
 
         $.each(movieData, function(i, v){
