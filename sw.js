@@ -13,7 +13,7 @@ var appShellFiles = [
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('mysite-static-v3').then(function(cache) {
+    caches.open(cacheName).then(function(cache) {
       return cache.addAll(appShellFiles);
     })
   );
