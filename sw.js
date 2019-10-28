@@ -1,4 +1,4 @@
-var cacheName = 'app-v1';
+var cacheName = 'app-v2';
 var appShellFiles = [
  "./index.html",
  "./page_content/form.html",
