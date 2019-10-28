@@ -73,7 +73,7 @@ body{
     margin: 10px;
 }
 
-@media only screen and (max-width: 415px){
+@media only screen and (max-height: 415px){
     h1 {
         font-size: 25px;
     }
