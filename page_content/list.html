@@ -2,20 +2,20 @@
     <div class="row">
     </div>
 </div>
-<div class='nodata'>
+<div class='nodata' style='display: none;'>
     <img src='./images/nodata-found.png' alt='no data was found'>
 </div>
 
 <script>
     $(document).ready(function() {
-        // if (movieData == undefined || movieData == 0){
-        //     $(".list").hide()
-        //     $("#display").css("display", "flex")
-        // }
-        // else{
-        //     $(".list").hide()
-        //     $("#display").hide()
-        // }
+        if (movieData == undefined || movieData.length == 0){
+            $(".list").hide()
+            $(".nodata").css("display", "flex")
+        }
+        else{
+            $(".list").show()
+            $(".nodata").hide()
+        }
         $.each(movieData, function(i, v){
             var card = $("<div/>")
             card.addClass("card")
