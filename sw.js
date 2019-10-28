@@ -2,11 +2,11 @@ var cacheName = 'app-v1';
 var appShellFiles = [
  "./index.html",
  "./page_content/form.html",
- "./page_content/map.html",
  "./page_content/list.html",
  "./styles.css",
  "./images/SBv4T.gif",
- "./images/nodata-found.png"
+ "./images/nodata-found.png",
+ "./images/videezy2.gif"
 ];
 
 
