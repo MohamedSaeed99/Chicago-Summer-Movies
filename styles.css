@@ -73,20 +73,32 @@ body{
     margin: 10px;
 }
 
-@media only screen and (max-height: 415px){
+@media only screen and (max-width: 415px){
+
     h1 {
+        font-size: 100px;
+    }
+    .form-check-label{
         font-size: 25px;
     }
-    #standForm{
-        font-size: 20px;
+    input[type=checkbox] {
+        transform: scale(1.5);
     }
     .card {
         width: 20rem;
     }
     .form-control{
-        height: 600px;
+        font-size: 25px;
+        height: 55px;
+        width: 100%;
+    }
+    .form-group{
+        font-size: 30px;
     }
     .nav-link{
-        font-size: 20px;
+        font-size: 200px;
+    }
+    .day{
+        padding: 35px;
     }
 }
