@@ -80,6 +80,7 @@
             });
             $.each(movieData, function(i, v){
                 try{
+                    var d = new Date('\''+v.date+'\'')
                     var contentString = '<div id="content">'+
                         '<div id="siteNotice">'+
                         '</div>'+
@@ -88,7 +89,7 @@
                         '<p><b>Park</b>: ' + v.park + '<br/>' +
                         '<b>Rating</b>: ' + v.rating + '<br/>' +
                         '<b>Closed Caption</b>: ' + v.cc + '<br/>' +
-                        '<b>Day</b>: ' + v.day + '<br/>' +
+                        '<b>Day</b>: ' + d.toDateString() + '<br/>' +
                         '<b>Park Phone</b>: ' + v.park_phone  + '<br/>' +
                         '<b>Park Address</b>: ' + v.park_address + '</p>'
                         '</div>'+

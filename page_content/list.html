@@ -41,8 +41,8 @@
             var h6 = $("<h6/>")
             h6.addClass("card-subtitle mb-2 text-muted")
             h6.text(v.title)
-
-            var str =  "Rating: " + v.rating + "\n" + "Closed Caption: " + v.cc + "\n "+ "Day: " + v.day + "\n" + 
+            var d = new Date('\''+v.date+'\'')
+            var str =  "Rating: " + v.rating + "\n" + "Closed Caption: " + v.cc + "\n "+ "Date: " + d.toDateString() + "\n" + 
                        "Park Phone: " + v.park_phone + "\n" + "Park Adress: " + v.park_address;
             
             var p = $("<p/>")
