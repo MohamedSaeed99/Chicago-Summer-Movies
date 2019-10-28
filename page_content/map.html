@@ -10,7 +10,7 @@
       });
 
       $.each(movieData, function(i, v){
-        if (v.location != ""){
+        if (v.location['latitude'] != "" || v.location['longitude'] != ""){
           console.log(v.park)
           var contentString = '<div id="content">'+
               '<div id="siteNotice">'+
