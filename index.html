@@ -26,6 +26,7 @@
             </ul>
         </div>
     </nav>
+    <div id="hi"></div>
 
     <!-- the content divs -->
     <div class="content" id='form'>
@@ -52,10 +53,10 @@
 
     <script>
         let movieData;
-        let mapss;
+        let map;
         function initMap() {
             var cen = {lat: 41.8781, lng: -87.6298};
-            mapss = new google.maps.Map(document.getElementById('map'), {
+            map = new google.maps.Map(document.getElementById('hi'), {
                 zoom: 11,
                 center: cen
             });
