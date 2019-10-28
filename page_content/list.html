@@ -14,7 +14,7 @@
         }
         else{
             $(".list").show()
-            $(".nodata").hide()
+            $(".nodata").css('display', 'none')
         }
         $.each(movieData, function(i, v){
             var card = $("<div/>")
