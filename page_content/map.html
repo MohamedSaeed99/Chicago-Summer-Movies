@@ -1,41 +1,48 @@
 <script>
     // This example displays a marker at the center of Australia.
     // When the user clicks the marker, an info window opens.
-      $.each(movieData, function(i, v){
-        if (v.location != ""){
-          var contentString = '<div id="content">'+
-              '<div id="siteNotice">'+
-              '</div>'+
-              '<h1 id="firstHeading" class="firstHeading">' + v.title + '</h1>' +
-              '<div id="bodyContent">' +
-              '<p><b>Park</b>: ' + v.park + '<br/>' +
-              '<b>Rating</b>: ' + v.rating + '<br/>' +
-              '<b>Closed Caption</b>: ' + v.cc + '<br/>' +
-              '<b>Day</b>: ' + v.day + '<br/>' +
-              '<b>Park Phone</b>: ' + v.park_phone  + '<br/>' +
-              '<b>Park Address</b>: ' + v.park_address + '</p>'
-              '</div>'+
-              '</div>';
-          var infowindow = new google.maps.InfoWindow({
-              content: contentString
-          });
-          // Adds offset to map so each mark is different
-          var latArray=[0.00001, 0.00005, 0.00006, 0.00007, 0.00008, 0.00009, 0.00010, 0.00011, 0.00012, 0.00013, 0.00014, 0.00015, 0.00016, 0.00017, 0.00018, 0.00019, 0.00020,
-                        -0.00001, -0.00005, -0.00006, -0.00007, -0.00008, -0.00009, -0.00010, -0.00011, -0.00012, -0.00013, -0.00014, -0.00015, -0.00016, -0.00017, -0.00018, -0.00019, -0.00020]
-          var randLatOffset = latArray[Math.floor(Math.random() * latArray.length)];
-          var lngArray=[0.00001, 0.00005, 0.00006, 0.00007, 0.00008, 0.00009, 0.00010, 0.00011, 0.00012, 0.00013, 0.00014, 0.00015, 0.00016, 0.00017, 0.00018, 0.00019, 0.00020,
-                        -0.00001, -0.00005, -0.00006, -0.00007, -0.00008, -0.00009, -0.00010, -0.00011, -0.00012, -0.00013, -0.00014, -0.00015, -0.00016, -0.00017, -0.00018, -0.00019, -0.00020]
-          var randLngOffset = lngArray[Math.floor(Math.random() * lngArray.length)];
-          var marker = new google.maps.Marker({
-              position: {lat: parseFloat(v.location['latitude'])+randLatOffset, lng: parseFloat(v.location['longitude'])+ randLngOffset},
-              map: map,
-              title: v.park + '('+v.title+')'
-          });
-          marker.addListener('click', function() {
-              infowindow.open(map, marker);
-          });
-        }
-      });
+      function initMap() {
+        var cen = {lat: 41.8781, lng: -87.6298};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: cen
+        });
+        $.each(movieData, function(i, v){
+          if ('latitiude' in v.location && 'longitude' in v.location){
+            var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">' + v.title + '</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>Park</b>: ' + v.park + '<br/>' +
+                '<b>Rating</b>: ' + v.rating + '<br/>' +
+                '<b>Closed Caption</b>: ' + v.cc + '<br/>' +
+                '<b>Day</b>: ' + v.day + '<br/>' +
+                '<b>Park Phone</b>: ' + v.park_phone  + '<br/>' +
+                '<b>Park Address</b>: ' + v.park_address + '</p>'
+                '</div>'+
+                '</div>';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+            // Adds offset to map so each mark is different
+            var latArray=[0.00001, 0.00005, 0.00006, 0.00007, 0.00008, 0.00009, 0.00010, 0.00011, 0.00012, 0.00013, 0.00014, 0.00015, 0.00016, 0.00017, 0.00018, 0.00019, 0.00020,
+                          -0.00001, -0.00005, -0.00006, -0.00007, -0.00008, -0.00009, -0.00010, -0.00011, -0.00012, -0.00013, -0.00014, -0.00015, -0.00016, -0.00017, -0.00018, -0.00019, -0.00020]
+            var randLatOffset = latArray[Math.floor(Math.random() * latArray.length)];
+            var lngArray=[0.00001, 0.00005, 0.00006, 0.00007, 0.00008, 0.00009, 0.00010, 0.00011, 0.00012, 0.00013, 0.00014, 0.00015, 0.00016, 0.00017, 0.00018, 0.00019, 0.00020,
+                          -0.00001, -0.00005, -0.00006, -0.00007, -0.00008, -0.00009, -0.00010, -0.00011, -0.00012, -0.00013, -0.00014, -0.00015, -0.00016, -0.00017, -0.00018, -0.00019, -0.00020]
+            var randLngOffset = lngArray[Math.floor(Math.random() * lngArray.length)];
+            var marker = new google.maps.Marker({
+                position: {lat: parseFloat(v.location['latitude'])+randLatOffset, lng: parseFloat(v.location['longitude'])+ randLngOffset},
+                map: map,
+                title: v.park + '('+v.title+')'
+            });
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+          }
+        });
+      }
   </script>
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjWnJfqHpg22ioGKK_n-Zsv3NuUwLVA-w&callback=initMap">
