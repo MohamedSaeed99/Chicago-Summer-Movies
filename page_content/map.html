@@ -8,7 +8,8 @@
             center: cen
         });
         $.each(movieData, function(i, v){
-          if (!(typeof v.location['latitude'] == "undefined") || !(typeof v.location['longitude'] == "undefined")){
+
+          try{
             console.log(v.location['latitude'] + " "+ v.location['longitude'] +" v2")
             var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+
@@ -41,6 +42,9 @@
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
             });
+          }
+          catch(error){
+            console.log(error)
           }
         });
       }
