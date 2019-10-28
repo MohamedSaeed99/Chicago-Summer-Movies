@@ -10,7 +10,7 @@ var appShellFiles = [
 ];
 
 
-
+//installs all the files as back up
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
