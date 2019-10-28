@@ -39,7 +39,7 @@
             <img src="./images/SBv4T.gif" alt="loading slowpoke moves"  width=400/> 
         </div>
     </div>
-    <div class="content1" id="map">
+    <div class="content" id="map">
         <div class='load'>
             <img src="./images/SBv4T.gif" alt="loading slowpoke moves"  width=400/>
         </div>
@@ -52,14 +52,6 @@
 
     <script>
         let movieData;
-        let map;
-        function initMap() {
-            var cen = {lat: 41.8781, lng: -87.6298};
-            map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 11,
-                center: cen
-            });
-            }
         $(document).ready(function() {
             function hideScreens() {
                 $(".content").hide();
@@ -72,9 +64,6 @@
             });
             
         });
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjWnJfqHpg22ioGKK_n-Zsv3NuUwLVA-w&callback=initMap">
     </script>
     <script>
         if ('serviceWorker' in navigator) {

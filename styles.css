@@ -6,9 +6,6 @@ body{
     display: none;
 }
 
-#hi{
-    height: 80vh;
-}
 
 .load, #standForm, .nodata{
     height:80vh;
