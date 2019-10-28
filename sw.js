@@ -4,7 +4,9 @@ var appShellFiles = [
  "./page_content/form.html",
  "./page_content/map.html",
  "./page_content/list.html",
- "./styles.css"
+ "./styles.css",
+ "./images/SBv4T.gif",
+ "./images/nodata-found.png"
 ];
 
 
