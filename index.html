@@ -26,7 +26,6 @@
             </ul>
         </div>
     </nav>
-    <div id="hi"></div>
 
     <!-- the content divs -->
     <div class="content" id='form'>
@@ -40,7 +39,7 @@
             <img src="./images/SBv4T.gif" alt="loading slowpoke moves"  width=400/> 
         </div>
     </div>
-    <div class="content" id="map">
+    <div class="content1" id="map">
         <div class='load'>
             <img src="./images/SBv4T.gif" alt="loading slowpoke moves"  width=400/>
         </div>
@@ -56,7 +55,7 @@
         let map;
         function initMap() {
             var cen = {lat: 41.8781, lng: -87.6298};
-            map = new google.maps.Map(document.getElementById('hi'), {
+            map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 11,
                 center: cen
             });
