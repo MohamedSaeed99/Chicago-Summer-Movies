@@ -73,7 +73,10 @@ body{
     margin: 10px;
 }
 
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 415px){
+    h1 {
+        font-size: 25px;
+    }
     #standForm{
         font-size: 20px;
     }
@@ -82,5 +85,8 @@ body{
     }
     .form-control{
         height: 600px;
+    }
+    .nav-link{
+        font-size: 20px;
     }
 }
