@@ -11,10 +11,13 @@ var appShellFiles = [
 
 
 
-self.addEventListener('install', function(e) {
-  console.log('[Service Worker] Install');
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(appShellFiles);
+    })
+  );
 });
-
 
 self.addEventListener('fetch', function(e) {
   e.respondWith(
