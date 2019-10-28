@@ -1,0 +1,10 @@
+{
+    "name": "Summer Movie Form",
+    "short_name": "Movie Form",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "navy",
+    "description": "An app to search for available movies over the summer at Chicago parks",
+    "icons": [],
+    "related_applications": []
+  }
