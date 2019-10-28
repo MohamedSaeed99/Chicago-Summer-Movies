@@ -1,3 +1,4 @@
+<div class='count'></div>
 <div class='list'>
     <div class="row">
     </div>
@@ -16,6 +17,11 @@
             $(".list").show()
             $(".nodata").css('display', 'none')
         }
+        var count = $("<p/>")
+        count.addClass("value")
+        count.text(movieData.length)
+        $(".count").append(p)
+        
         $.each(movieData, function(i, v){
             var card = $("<div/>")
             card.addClass("card")
