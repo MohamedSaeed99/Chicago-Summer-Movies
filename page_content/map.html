@@ -8,7 +8,7 @@
             center: cen
         });
         $.each(movieData, function(i, v){
-          if (!(undefined in v.location['latitude']) || !(undefined in v.location['longitude'])){
+          if (v.location != ""){
             var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
