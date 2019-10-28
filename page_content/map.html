@@ -2,7 +2,7 @@
     // This example displays a marker at the center of Australia.
     // When the user clicks the marker, an info window opens
     $.each(movieData, function(i, v){
-      if (v.location['latitude'] != "" || v.location['longitude'] != ""){
+      if (v.location['latitude'] != undefined || v.location['longitude'] != undefined){
         console.log(v.park + ' v1')
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
