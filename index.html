@@ -51,17 +51,27 @@
 
     <script>
         let movieData;
+        let map;
         $(document).ready(function() {
+            function initMap() {
+                var cen = {lat: 41.8781, lng: -87.6298};
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 11,
+                    center: cen
+                });
+            }
+            
             function hideScreens() {
                 $(".content").hide();
             }
+            
             $(".nav-link").on("click", function(){
                 hideScreens();
                 var target = $(this).attr("href");
                 $(target).show();
                 $(target).load('page_content/'+target.replace("#","") + ".html");
             });
-
+            
         });
     </script>
 </body>
