@@ -34,11 +34,11 @@
             var randLngOffset = lngArray[Math.floor(Math.random() * lngArray.length)];
             var marker = new google.maps.Marker({
                 position: {lat: parseFloat(v.location['latitude'])+randLatOffset, lng: parseFloat(v.location['longitude'])+ randLngOffset},
-                map: map,
+                map: mapss,
                 title: v.park + '('+v.title+')'
             });
             marker.addListener('click', function() {
-                infowindow.open(map, marker);
+                infowindow.open(mapss, marker);
             });
           }
           catch(error){
