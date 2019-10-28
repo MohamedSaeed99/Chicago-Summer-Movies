@@ -8,7 +8,7 @@
             center: cen
         });
         $.each(movieData, function(i, v){
-          if (v.location['latitude'] != "" && v.location['longitude'] != "" || (v.location['latitude'].length != 0 && v.location['longitude'].length != 0)){
+          if (!(typeof v.location['latitude'] === undefined) || !(typeof v.location['longitude'] === undefined)){
             console.log(v.location['latitude'] + " "+ v.location['longitude'])
             var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+
