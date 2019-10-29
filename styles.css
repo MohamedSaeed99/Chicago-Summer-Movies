@@ -23,8 +23,10 @@ body{
     align-items: center;
 }
 
+.value{
+    padding-right: 50px;
+}
 .count{
-    margin-right: 50px;
     padding-top:10px;
     width:100%;
     display: flex;
