@@ -75,13 +75,15 @@ body{
     margin: 10px;
 }
 
+.shadowCard{
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); 
+}
 .aboutCard{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    background-color: aqua;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);   
+    background-color: aqua;  
 }
 .aboutInfo{
     height: 80vh;
