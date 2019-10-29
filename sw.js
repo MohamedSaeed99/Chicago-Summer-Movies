@@ -23,6 +23,7 @@ self.addEventListener('install', function(event) {
 
 fetch('users.json').then(function(response) {
   console.log(response.headers.get('Content-Type'));
+  alert(response.headers.get('Date'));
   console.log(response.headers.get('Date'));
 
   console.log(response.status);
