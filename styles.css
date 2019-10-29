@@ -86,9 +86,6 @@ body{
     align-items:center;
     background-color: aqua;  
 }
-.cardInfo{
-    text-align: center;
-}
 .aboutInfo{
     height: 80vh;
     width:100%;
