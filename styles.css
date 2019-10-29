@@ -83,6 +83,7 @@ body{
     background-color: aqua;
 }
 .aboutInfo{
+    height: 80vh;
     width:100%;
     display: flex;
     justify-content: center;
