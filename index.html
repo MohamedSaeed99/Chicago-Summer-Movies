@@ -148,9 +148,9 @@
                 });
             });
         }
-        // fetch('users.json').then(function(response) {
-        //     alert("     Service Worker Last Update: \n               " + response.headers.get('Date') + "\n     Refresh in a few minutes to get new Data!!!");
-        // });
+        if(!navigator.onLine){
+            alert("\tYou are looking at old data.\n\tConnect to internet for newer data!!");
+        }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjWnJfqHpg22ioGKK_n-Zsv3NuUwLVA-w&callback=initMap">
