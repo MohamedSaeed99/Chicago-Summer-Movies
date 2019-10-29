@@ -20,18 +20,6 @@ self.addEventListener('install', function(event) {
   );
 });
 
-
-fetch('users.json').then(function(response) {
-  console.log(response.headers.get('Content-Type'));
-  alert(response.headers.get('Date'));
-  console.log(response.headers.get('Date'));
-
-  console.log(response.status);
-  console.log(response.statusText);
-  console.log(response.type);
-  console.log(response.url);
-});
-
 self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(r) {
