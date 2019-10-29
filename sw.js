@@ -7,7 +7,7 @@ var appShellFiles = [
  "./images/SBv4T.gif",
  "./images/nodata-found.png",
  "./images/videezy2.gif",
- "./github.svg"
+ "./images/github.png"
 ];
 
 
