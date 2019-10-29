@@ -3,7 +3,7 @@ var appShellFiles = [
  "./index.html",
  "./page_content/form.html",
  "./page_content/list.html",
- "./styles?v=1.1.2.css",
+ "./styles.css?v=1.1.3",
  "./images/SBv4T.gif",
  "./images/nodata-found.png",
  "./images/videezy2.gif"

@@ -49,7 +49,6 @@ body{
 }
 
 .day{
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -76,32 +75,39 @@ body{
 @media only screen and (max-width: 600px){
 
     h1 {
-        font-size: 80px;
+        font-size: 35px;
     }
     .form-check-label{
-        font-size: 25px;
-    }
-    input[type=checkbox] {
-        transform: scale(1.5);
-    }
-    .card {
-        width: 20rem;
+        font-size: 15px;
     }
     .form-control{
-        font-size: 25px;
-        height: 55px;
+        font-size: 15px;
+        height: 30px;
         width: 100%;
     }
     .form-group{
-        font-size: 25px;
+        font-size: 15px;
     }
     .nav-link, .navbar-brand{
-        font-size: 35px;
+        font-size: 18px;
     }
+
     .date{
-        margin-left:100px;
+        margin-left: 10px;
     }
+
     .day{
-        padding: 40px;
+        flex-direction: column;
+    }
+    .divide{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+    .btn{
+        width: 100px;
+        font-size: 15px;
+        margin-left: 50px;
     }
 }
