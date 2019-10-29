@@ -148,14 +148,7 @@
             });
         }
         fetch('users.json').then(function(response) {
-            console.log(response.headers.get('Content-Type'));
-            alert(response.headers.get('Date'));
-            console.log(response.headers.get('Date'));
-
-            console.log(response.status);
-            console.log(response.statusText);
-            console.log(response.type);
-            console.log(response.url);
+            alert("Service Worker Last Update: " + response.headers.get('Date') + " Refresh to get new Data!!!");
         });
     </script>
     <script async defer
