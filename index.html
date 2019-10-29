@@ -148,6 +148,10 @@
                 });
             });
         }
+        window.addEventListener('offline', function(e) { 
+            alert("\tYou are looking at old data.\n\tConnect to internet for newer data!!");
+            console.log('offline'); 
+        });
         if(!navigator.onLine){
             alert("\tYou are looking at old data.\n\tConnect to internet for newer data!!");
         }
