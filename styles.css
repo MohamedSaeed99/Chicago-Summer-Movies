@@ -75,11 +75,6 @@ body{
     margin: 10px;
 }
 
-.gitImage {
-    opacity: 0.5;
-    filter: alpha(opacity=40);
-}
-
 .card-body{
     display: flex;
     flex-direction: column;
@@ -94,7 +89,10 @@ body{
     align-items:center;
     
 }
-
+.gitImage {
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+}
 .gitImage:hover {
     opacity: 1.0;
     filter: alpha(opacity=100);
